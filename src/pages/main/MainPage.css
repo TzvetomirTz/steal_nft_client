@@ -1,8 +1,46 @@
 .MainPage {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
 }
 
 .MainPageBody {
-    flex: 1;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainPageBanner {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MainPageBannerTitle {
+    font-size: 9em;
+    line-height: 0.9em;
+}
+
+.MainPageBannerSubtext {
+    font-size: 1.4em;
+}
+
+.MainPageBannerStartButton {
+    font-size: 1.4em;
+    margin-top: 4em;
+    border: 1px solid #ffffff;
+    padding: 0.6em 6em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.MainPageMidPanel {
+    background-color: #ffffff;
+    width: 28em;
+    height: 36em;
+    border-radius: 1em;
 }

@@ -1,23 +1,26 @@
 .TopBar {
     color: #fff;
-    padding: 1.5em 2em;
+    padding: 2em 2em;
     display: flex;
     flex-direction: row;
     font-weight: bold;
 }
 
 .TopBarLogoText {
-    font-size: 32px;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 .TopBarRight {
     display: flex;
     margin-left: auto;
+    padding-right: 2em;
 }
 
 .TopBarButton {
-    margin-left: 3em;
-    font-size: 1.2em;
+    margin-left: 4em;
+    font-size: 1.3em;
     line-height: 1.2em;
     text-align: center;
+    cursor: pointer;
 }

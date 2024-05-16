@@ -6,7 +6,14 @@ const MainPage = () => {
 		<div className='MainPage'>
 			<TopBar />
 			<div className='MainPageBody'>
-				asdf
+				<div className='MainPageBanner'>
+					<div className='MainPageBannerTitle NoSelect'>StealNFT</div>
+					<div className='MainPageBannerSubtext  NoSelect'>
+						When “right click” + “save image as” just doesn’t do it for you anymore...
+					</div>
+					<div className='MainPageBannerStartButton  NoSelect'>Start</div>
+				</div>
+				{/* <div className='MainPageMidPanel'> </div> */}
 			</div>
 		</div>
 	);
