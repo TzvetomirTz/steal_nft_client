@@ -25,6 +25,11 @@ code {
     monospace;
 }
 
+/* Vars */
+:root { 
+  --dark-blue: #180964;
+}
+
 /* Utils */
 
 .NoSelect {
