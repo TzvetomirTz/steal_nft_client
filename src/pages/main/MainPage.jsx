@@ -20,7 +20,7 @@ const MainPage = () => {
 				{displayMainPageBanner && <div className='MainPageBanner'>
 					<div className='MainPageBannerTitle NoSelect'>StealNFT</div>
 					<div className='MainPageBannerSubtext  NoSelect'>
-						When “right click” + “save image as” just doesn’t do it for you anymore...
+						When "Right Click" + "Save Image As" just doesn't do it for you anymore...
 					</div>
 					<div className='MainPageBannerStartButton  NoSelect' onClick={ onStart }>Start</div>
 				</div>}
@@ -30,6 +30,7 @@ const MainPage = () => {
 						<div className='WalletOption'>
 							<img src={ metamaskIcon } alt='' className='WalletIcon NoSelect' />
 							<div className='WalletOptionTitle NoSelect'>MetaMask</div>
+							<div className='WalletOptionArrow NoSelect'>→</div>
 						</div>
 					</div>
 				</div>}
