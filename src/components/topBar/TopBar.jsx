@@ -10,7 +10,7 @@ const TopBar = () => {
 				<div className='TopBarButton NoSelect'>How It Works</div>
 				<div className='TopBarButton NoSelect'>Rights</div>
 				<div className='TopBarButton NoSelect'>About</div>
-				<div className='TopBarButton NoSelect'>Preview Data</div>
+				<div className='TopBarButton NoSelect'>Explore</div>
 			</div>
 		</div>
 	);

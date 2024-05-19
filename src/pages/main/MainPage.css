@@ -49,7 +49,6 @@
 
 .MainPageConnectWalletPanel {
     background-color: #ffffff;
-    width: 26em;
     height: 34em;
     border-radius: 1em;
     box-shadow: 0 0 1.5em 0.2em rgba(256, 256, 256, 0.6);
@@ -59,7 +58,7 @@
     padding: 2.5em;
 }
 
-.MainPageConnectWalletPanelTitle {
+.MainPageConnectWalletPanelTitle, .MainPageStealPanelTitle {
     font-size: 2.1em;
     line-height: 2em;
     color: var(--dark-blue);
@@ -70,7 +69,7 @@
     border: 1px solid var(--dark-blue);
     flex: 1;
     width: 100%;
-    border-radius: 1em;
+    border-radius: 0.25em;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -80,6 +79,7 @@
     display: flex;
     padding: 2em;
     cursor: pointer;
+    width: 26em;
 }
 
 .WalletOption:hover {
@@ -106,4 +106,67 @@
     justify-content: center;
     align-content: center;
     font-size: 1.5em;
+}
+
+.MainPageStealPanel {
+    background-color: #ffffff;
+    height: 34em;
+    border-radius: 1em;
+    box-shadow: 0 0 1.5em 0.2em rgba(256, 256, 256, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 3.5em;
+}
+
+.MainPageStealPanelFormWrap {
+    margin-top: 1.7em;
+    border: 1px solid var(--dark-blue);
+    flex: 1;
+    width: 100%;
+    border-radius: 0.25em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1em;
+    padding-top: 1.8em;
+}
+
+.StealFormFieldTitle {
+    color: var(--dark-blue);
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+.StealFormInputField {
+    color: var(--dark-blue);
+    margin-bottom: 1.8em;
+    font-size: 1.2em;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    border: 1px solid var(--dark-blue);
+    width: 24em;
+}
+
+.StealFormBottom {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.StealButton {
+    border: 1px solid var(--dark-blue);
+    font-size: 1.4em;
+    border-radius: 0.25em;
+    width: 8em;
+    text-align: center;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.StealButton:active {
+    background-color: var(--dark-blue);
+    color: #ffffff;
 }
