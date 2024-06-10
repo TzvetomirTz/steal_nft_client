@@ -3,11 +3,14 @@ import { ethers } from 'ethers';
 import TopBar from '../../components/topBar/TopBar';
 import './MainPage.css';
 import metamaskIcon from '../../assets/wlt_ics/mtmsk_icn.svg'
+import { STEAL_NFT_CONTRACT_ADDRESS } from '../../util/Constants';
+import StealNftService from '../../services/StealNftService';
 
 const MainPage = () => {
 	const [displayMainPageBanner, setDisplayMainPageBanner] = useState(true);
 	const [displayMainPageConnectWalletPanel, setDisplayMainPageConnectWalletPanel] = useState(false);
 	const [walletProvider, setWalletProvider] = useState(null);
+	const [currentStealPrice, setCurrentStealPrice] = useState("???");
 
 	const onStart = () => {
 		setDisplayMainPageBanner(false);
@@ -16,9 +19,8 @@ const MainPage = () => {
 
 	const connectMetaMask = async () => {
 		const provider = new ethers.BrowserProvider(window.ethereum);
-		const signer = await provider.getSigner();
-		console.log("Account:", await signer.getAddress());
 		setWalletProvider(provider);
+		setCurrentStealPrice(await StealNftService.getStealPrice(provider));
 	};
 
 	return (
@@ -45,6 +47,7 @@ const MainPage = () => {
 				{walletProvider && <div className='MainPageStealPanel'>
 					<div className='MainPageStealPanelTitle NoSelect'>✨ Steal ✨</div>
 					<div className='MainPageStealPanelFormWrap'>
+						<div className='StealFormFieldTitle NoSelect'>Current yoink price: { currentStealPrice } ETH</div>
 						<div className='StealFormFieldTitle NoSelect'>Collection Address:</div>
 						<input className='StealFormInputField' />
 						<div className='StealFormFieldTitle NoSelect'>NFT ID:</div>
