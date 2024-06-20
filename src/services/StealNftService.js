@@ -6,7 +6,6 @@ import web3 from 'web3';
 const stealNftAbi = JSON.stringify(stealNftAbiRaw);
 
 const getStealPrice = async (provider) => {
-    // const signer = await provider.getSigner();
     const stealNftContractAddress = STEAL_NFT_CONTRACT_ADDRESS[(await provider.getNetwork()).name];
     const stealNftContract = new ethers.Contract(stealNftContractAddress, stealNftAbi, provider);
 
@@ -18,8 +17,16 @@ const getStealPrice = async (provider) => {
     }
 };
 
+const stealNft = async (provider, collectionAddress, nftId, destinationAddress, price) => {
+    const stealNftContractAddress = STEAL_NFT_CONTRACT_ADDRESS[(await provider.getNetwork()).name];
+    const stealNftContract = new ethers.Contract(stealNftContractAddress, stealNftAbi, provider);
+
+    await stealNftContract.steal(collectionAddress, nftId, destinationAddress, {value: web3.utils.toWei(Number(price), 'ether')});
+};
+
 const StealNftService = {
-    getStealPrice
+    getStealPrice,
+    stealNft
 };
 
 export default StealNftService;

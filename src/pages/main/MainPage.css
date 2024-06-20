@@ -110,7 +110,6 @@
 
 .MainPageStealPanel {
     background-color: #ffffff;
-    height: 34em;
     border-radius: 1em;
     box-shadow: 0 0 1.5em 0.2em rgba(256, 256, 256, 0.6);
     display: flex;
@@ -149,6 +148,29 @@
     width: 24em;
 }
 
+.DestinationAddressInputFieldWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.DestinationAddressInputField {
+    width: 20em;
+}
+
+.MeButton {
+    background-color: #ffffff;
+    color: var(--dark-blue);
+    width: 3.6em;
+    height: 2.6em;
+    text-align: center;
+    align-content: center;
+    border: 1px solid var(--dark-blue);
+    border-radius: 0.25em;
+    margin-left: 1em;
+    cursor: pointer;
+
+}
+
 .StealFormBottom {
     margin-top: 1em;
     display: flex;
@@ -166,7 +188,13 @@
     color: var(--dark-blue);
 }
 
-.StealButton:active {
+.Button:active {
     background-color: var(--dark-blue);
     color: #ffffff;
+}
+
+.YoinkPriceIndicator {
+    color: var(--dark-blue);
+    text-align: center;
+    margin-top: 1em;
 }

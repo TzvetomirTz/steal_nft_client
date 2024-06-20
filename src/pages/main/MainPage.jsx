@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ethers } from 'ethers';
 import TopBar from '../../components/topBar/TopBar';
 import './MainPage.css';
 import metamaskIcon from '../../assets/wlt_ics/mtmsk_icn.svg'
-import { STEAL_NFT_CONTRACT_ADDRESS } from '../../util/Constants';
 import StealNftService from '../../services/StealNftService';
 
 const MainPage = () => {
@@ -11,6 +10,10 @@ const MainPage = () => {
 	const [displayMainPageConnectWalletPanel, setDisplayMainPageConnectWalletPanel] = useState(false);
 	const [walletProvider, setWalletProvider] = useState(null);
 	const [currentStealPrice, setCurrentStealPrice] = useState("???");
+
+	const collectionAddressRef = useRef();
+	const nftIdRef = useRef();
+	const destinationAddressRef = useRef();
 
 	const onStart = () => {
 		setDisplayMainPageBanner(false);
@@ -28,7 +31,7 @@ const MainPage = () => {
 			<TopBar />
 			<div className='MainPageBody'>
 				{displayMainPageBanner && !walletProvider && <div className='MainPageBanner'>
-					<div className='MainPageBannerTitle NoSelect'>StealNFT</div>
+					<div className='MainPageBannerTitle NoSelect'>YoinkNFT</div>
 					<div className='MainPageBannerSubtext  NoSelect'>
 						When "Right Click" + "Save Image As" just doesn't do it for you anymore...
 					</div>
@@ -45,18 +48,31 @@ const MainPage = () => {
 					</div>
 				</div>}
 				{walletProvider && <div className='MainPageStealPanel'>
-					<div className='MainPageStealPanelTitle NoSelect'>✨ Steal ✨</div>
+					<div className='MainPageStealPanelTitle NoSelect'>✨ Yoink ✨</div>
 					<div className='MainPageStealPanelFormWrap'>
-						<div className='StealFormFieldTitle NoSelect'>Current yoink price: { currentStealPrice } ETH</div>
 						<div className='StealFormFieldTitle NoSelect'>Collection Address:</div>
-						<input className='StealFormInputField' />
+						<input className='StealFormInputField' ref={collectionAddressRef} />
 						<div className='StealFormFieldTitle NoSelect'>NFT ID:</div>
-						<input className='StealFormInputField' />
+						<input className='StealFormInputField' ref={nftIdRef} />
 						<div className='StealFormFieldTitle NoSelect'>Destination Address:</div>
-						<input className='StealFormInputField' />
-						<div className='StealFormBottom'>
-							<div className='StealButton NoSelect'>Steal</div>
+						<div className='DestinationAddressInputFieldWrapper'>
+							<input className='StealFormInputField DestinationAddressInputField' ref={destinationAddressRef}/>
+							<div className='MeButton Button NoSelect' onClick={
+								async () => {destinationAddressRef.current.value = (await walletProvider.getSigner()).address}
+							}>Me</div>
 						</div>
+						<div className='StealFormBottom'>
+							<div className='StealButton Button NoSelect' onClick={() => {
+								StealNftService.stealNft(
+									walletProvider,
+									collectionAddressRef.current.value,
+									nftIdRef.current.value,
+									destinationAddressRef.current.value,
+									currentStealPrice
+								)}
+							}>Yoink</div>
+						</div>
+						<div className='YoinkPriceIndicator NoSelect'>Price: { currentStealPrice } ETH</div>
 					</div>
 				</div>}
 			</div>
