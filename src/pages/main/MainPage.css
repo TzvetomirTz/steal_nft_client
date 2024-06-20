@@ -122,12 +122,11 @@
     margin-top: 1.7em;
     border: 1px solid var(--dark-blue);
     flex: 1;
-    width: 100%;
     border-radius: 0.25em;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding: 1em;
+    padding: 2em;
     padding-top: 1.8em;
 }
 
@@ -145,7 +144,7 @@
     border-radius: 0.25em;
     padding: 0.5em;
     border: 1px solid var(--dark-blue);
-    width: 24em;
+    width: 28em;
 }
 
 .DestinationAddressInputFieldWrapper {
@@ -154,7 +153,7 @@
 }
 
 .DestinationAddressInputField {
-    width: 20em;
+    width: 24em;
 }
 
 .MeButton {
@@ -168,7 +167,6 @@
     border-radius: 0.25em;
     margin-left: 1em;
     cursor: pointer;
-
 }
 
 .StealFormBottom {

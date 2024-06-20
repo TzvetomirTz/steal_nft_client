@@ -68,7 +68,7 @@ const MainPage = () => {
 						<div className='StealFormFieldTitle NoSelect'>Destination Address:</div>
 						<div className='DestinationAddressInputFieldWrapper'>
 							<input className='StealFormInputField DestinationAddressInputField' ref={destinationAddressRef}/>
-							<div className='MeButton Button NoSelect' onClick={
+							<div className='MeButton NoSelect' onClick={
 								async () => {destinationAddressRef.current.value = (await walletProvider.getSigner()).address}
 							}>Me</div>
 						</div>
