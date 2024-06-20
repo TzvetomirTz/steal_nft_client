@@ -10,6 +10,7 @@ const MainPage = () => {
 	const [displayMainPageConnectWalletPanel, setDisplayMainPageConnectWalletPanel] = useState(false);
 	const [walletProvider, setWalletProvider] = useState(null);
 	const [currentStealPrice, setCurrentStealPrice] = useState("???");
+	const [isWalletConnectionAwaiting, setIsWalletConnectionAwaiting] = useState(false);
 
 	const collectionAddressRef = useRef();
 	const nftIdRef = useRef();
@@ -21,7 +22,17 @@ const MainPage = () => {
 	};
 
 	const connectMetaMask = async () => {
+		if (isWalletConnectionAwaiting) {
+			// Show the user that they already have an awaiting metamask connection prompt
+			console.log("You already have an awaiting metamask connection prompt.");
+			return;
+		}
+
 		const provider = new ethers.BrowserProvider(window.ethereum);
+		setIsWalletConnectionAwaiting(true);
+		await provider.getSigner(); // Enforces user to login to metamask before proceeding further
+		setIsWalletConnectionAwaiting(false);
+
 		setWalletProvider(provider);
 		setCurrentStealPrice(await StealNftService.getStealPrice(provider));
 	};
