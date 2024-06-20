@@ -19,9 +19,13 @@ const getStealPrice = async (provider) => {
 
 const stealNft = async (provider, collectionAddress, nftId, destinationAddress, price) => {
     const stealNftContractAddress = STEAL_NFT_CONTRACT_ADDRESS[(await provider.getNetwork()).name];
-    const stealNftContract = new ethers.Contract(stealNftContractAddress, stealNftAbi, provider);
+    const stealNftContract = new ethers.Contract(stealNftContractAddress, stealNftAbi, await provider.getSigner());
 
-    await stealNftContract.steal(collectionAddress, nftId, destinationAddress, {value: web3.utils.toWei(Number(price), 'ether')});
+    try {
+        await stealNftContract.steal(collectionAddress, nftId, destinationAddress, {value: web3.utils.toWei(Number(price), 'ether')});
+    } catch (err) {
+        console.log("Please double check your input data...");
+    }
 };
 
 const StealNftService = {
