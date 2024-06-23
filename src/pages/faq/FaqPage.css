@@ -1,0 +1,36 @@
+.FaqPage {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.FaqPageBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.QuestionAnswerWrapper {
+    background-color: #ffffff;
+    color: var(--dark-blue);
+    margin: 2em 4em;
+    border-radius: 1em;
+    box-shadow: 0 0 1.5em 0.2em rgba(256, 256, 256, 0.6);
+}
+
+.Question {
+    margin: 2em;
+    margin-bottom: 0em;
+    font-size: 2em;
+}
+
+.Answer {
+    margin-top: 0.5em;
+    margin-left: 4em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    font-size: 1.5em;
+}
