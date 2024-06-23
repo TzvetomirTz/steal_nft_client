@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import MainPage from './pages/main/MainPage';
+import FaqPage from './pages/faq/FaqPage';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainPage />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <MainPage /> } />
+        <Route path='/faq' element={ <FaqPage /> } />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
