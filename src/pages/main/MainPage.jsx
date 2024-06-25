@@ -1,9 +1,11 @@
 import { useRef, useState } from 'react';
 import { ethers } from 'ethers';
 import TopBar from '../../components/topBar/TopBar';
+import 'react-toastify/dist/ReactToastify.css';
 import './MainPage.css';
 import metamaskIcon from '../../assets/wlt_ics/mtmsk_icn.svg'
 import StealNftService from '../../services/StealNftService';
+import { ToastContainer } from 'react-toastify';
 
 const MainPage = () => {
 	const [displayMainPageBanner, setDisplayMainPageBanner] = useState(true);
@@ -40,6 +42,7 @@ const MainPage = () => {
 	return (
 		<div className='MainPage'>
 			<TopBar />
+			<ToastContainer className="ToastContainer" />
 			<div className='MainPageBody'>
 				{displayMainPageBanner && !walletProvider && <div className='MainPageBanner'>
 					<div className='MainPageBannerTitle NoSelect'>YoinkNFT</div>

@@ -24,3 +24,20 @@
     text-align: center;
     cursor: pointer;
 }
+
+.ToastContainer {
+    margin-top: 4em;
+}
+
+.Toastify__toast {
+    box-shadow: 0 0 1.5em 0.2em rgba(256, 256, 256, 0.6) !important;
+    color: var(--dark-blue) !important;
+}
+
+.Toastify__progress-bar-theme--light {
+    background: #fff !important;
+}
+
+.Toastify__progress-bar {
+    background-color: var(--dark-blue);
+}

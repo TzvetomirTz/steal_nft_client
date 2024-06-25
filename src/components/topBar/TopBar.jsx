@@ -1,6 +1,8 @@
 import './TopBar.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const TopBar = () => {
 	const navigate = useNavigate();
@@ -10,13 +12,14 @@ const TopBar = () => {
 
 	return (
 		<div className='TopBar'>
+			<ToastContainer className="ToastContainer" />
 			<div className='TopBarLeft'>
 				<div className='TopBarLogoText NoSelect' onClick={goToMainPage}>YoinkNFT</div>
 			</div>
 			<div className='TopBarRight'>
 				<div className='TopBarButton NoSelect' onClick={goToFaqPage}>FAQ</div>
 				<div className='TopBarButton NoSelect' onClick={goToAboutPage}>About</div>
-				<div className='TopBarButton NoSelect'>Explore NFTs ↗</div>
+				<div className='TopBarButton NoSelect' onClick={() => {toast("WIP. Soon this button will redirect you to an NFT browser!")}}>Explore NFTs ↗</div>
 			</div>
 		</div>
 	);
