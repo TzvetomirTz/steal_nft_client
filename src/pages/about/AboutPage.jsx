@@ -12,7 +12,7 @@ const AboutPage = () => {
 						<div className='WhatIsYoinkNftLeft'>YoinkNFT!</div>
 						<div className='AboutPanelParagraph'>
 							<div>First we've got to define what a yoink is. There's no better definition than the one that can be found 
-								<a href='https://www.urbandictionary.com/define.php?term=Yoink' target="_blank" rel="noopener noreferrer"> HERE </a>
+								<a className='WhiteText' href='https://www.urbandictionary.com/define.php?term=Yoink' target="_blank" rel="noopener noreferrer"> HERE </a>
 							.
 							</div>
 							<div>By now you should know what an NFT is. In case you don't, click away before it's too late!</div>
