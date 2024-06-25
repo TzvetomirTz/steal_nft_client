@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './MainPage.css';
 import metamaskIcon from '../../assets/wlt_ics/mtmsk_icn.svg'
 import StealNftService from '../../services/StealNftService';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 const MainPage = () => {
 	const [displayMainPageBanner, setDisplayMainPageBanner] = useState(true);
@@ -25,8 +25,7 @@ const MainPage = () => {
 
 	const connectMetaMask = async () => {
 		if (isWalletConnectionAwaiting) {
-			// Show the user that they already have an awaiting metamask connection prompt
-			console.log("You already have an awaiting metamask connection prompt.");
+			toast("You already have an awaiting metamask connection prompt.");
 			return;
 		}
 
