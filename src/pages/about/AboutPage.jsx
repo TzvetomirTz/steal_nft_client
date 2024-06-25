@@ -19,7 +19,7 @@ const AboutPage = () => {
 							<div>Still here? Ok. YoinkNFT yoinks NFTs.</div>
 							<div>It mints a clone of an already existing NFT and sets its owner to whichever owner you pick.</div>
 							<div>It could be you, it could be a friend...</div>
-							<div>Heck even the president could now afford to own a low quality jpeg of a penguin dressed as a bear.</div>
+							<div>Heck even the president could now afford to own a low quality jpeg of a penguin dressed as a polar bear.</div>
 							<div className='SmallText'>Although still hosted on Google Drive...</div>
 						</div>
 					</div>
