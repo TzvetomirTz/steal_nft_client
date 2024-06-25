@@ -32,8 +32,9 @@ const AboutPage = () => {
 							<div>The people are tired of [Right Click] + [Save Image As] and we at YoinkNFT listened...</div>
 							<div>We made the alternative, being buying an NFT, cheaper.</div>
 							<div className='SmallText'>
-								Actually the idea of the project is to bring forward the negatives of how this magnificent 
-								technology is being used and spark a discussion on how to improve it. Or not, maybe it's perfect as it is?
+								Actually the idea of the project is to bring forward the negatives of how this otherwise cool 
+								technology is being used and spark a discussion on how to improve it. 
+								Or not, maybe everything is perfect as it is?
 							</div>
 						</div>
 					</div>
