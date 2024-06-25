@@ -1,0 +1,52 @@
+.AboutPage {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+    width: 100vw;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.AboutPageBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.AboutPanel {
+    background-color: rgb(24, 9, 100, 0.8);
+    margin: 2em 4em;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+}
+
+.AboutPanelTitle {
+    text-align: center;
+    font-size: 4em;
+}
+
+.AboutPanelBody {
+    margin: 2em;
+    display: flex;
+}
+
+.WhatIsYoinkNftLeft {
+    font-size: 6em;
+    margin-right: 1em;
+    align-items: center;
+}
+
+.AboutPanelParagraph {
+    font-size: 1.5em;
+}
+
+a {
+    color: #fff;
+}
+
+.SmallText {
+    font-size: 0.4em;
+}

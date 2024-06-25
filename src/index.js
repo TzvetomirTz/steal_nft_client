@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import MainPage from './pages/main/MainPage';
 import FaqPage from './pages/faq/FaqPage';
+import AboutPage from './pages/about/AboutPage';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={ <MainPage /> } />
         <Route path='/faq' element={ <FaqPage /> } />
+        <Route path='/about' element={ <AboutPage /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

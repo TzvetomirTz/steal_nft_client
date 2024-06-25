@@ -4,8 +4,9 @@ import { useCallback } from 'react';
 
 const TopBar = () => {
 	const navigate = useNavigate();
-	const goToMainPage = useCallback(() => { navigate('/'); });
-	const goToFaqPage = useCallback(() => { navigate('/faq'); });
+	const goToMainPage = useCallback(() => { navigate('/'); }, [navigate]);
+	const goToFaqPage = useCallback(() => { navigate('/faq'); }, [navigate]);
+	const goToAboutPage = useCallback(() => { navigate('/about'); }, [navigate]);
 
 	return (
 		<div className='TopBar'>
@@ -14,7 +15,7 @@ const TopBar = () => {
 			</div>
 			<div className='TopBarRight'>
 				<div className='TopBarButton NoSelect' onClick={goToFaqPage}>FAQ</div>
-				<div className='TopBarButton NoSelect'>About</div>
+				<div className='TopBarButton NoSelect' onClick={goToAboutPage}>About</div>
 				<div className='TopBarButton NoSelect'>Explore NFTs ↗</div>
 			</div>
 		</div>
