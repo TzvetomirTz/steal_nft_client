@@ -19,6 +19,10 @@ const FaqPage = () => {
                     <div className='Answer NoSelect'>Nope. Quite the opposite. You're a scam.</div>
                 </div>
                 <div className='QuestionAnswerWrapper'>
+                    <div className='Question NoSelect'>► What networks are supported?</div>
+                    <div className='Answer NoSelect'>The Mainnet and Sepolia.</div>
+                </div>
+                <div className='QuestionAnswerWrapper'>
                     <div className='Question NoSelect'>► Can I contribute to this magnificent project?</div>
                     <div className='Answer NoSelect'>
                         Yes you can! It's open source and can be found 
