@@ -10,7 +10,7 @@ const getStealPrice = async (provider) => {
     const stealNftContract = new ethers.Contract(stealNftContractAddress, stealNftAbi, provider);
 
     try {
-        return "" + web3.utils.fromWei(await stealNftContract.getStealNftPrice(), 'ether');
+        return "" + web3.utils.fromWei(await stealNftContract.getYoinkNftPrice(), 'ether');
     } catch (err) {
         console.log(err);
         return "???";
@@ -22,7 +22,7 @@ const stealNft = async (provider, collectionAddress, nftId, destinationAddress, 
     const stealNftContract = new ethers.Contract(stealNftContractAddress, stealNftAbi, await provider.getSigner());
 
     try {
-        await stealNftContract.steal(collectionAddress, nftId, destinationAddress, {value: web3.utils.toWei(Number(price), 'ether')});
+        await stealNftContract.yoink(collectionAddress, nftId, destinationAddress, {value: web3.utils.toWei(Number(price), 'ether')});
     } catch (err) {
         console.log("Please double check your input data...");
     }

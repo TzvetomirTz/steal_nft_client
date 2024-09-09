@@ -20,7 +20,7 @@ const FaqPage = () => {
                 </div>
                 <div className='QuestionAnswerWrapper'>
                     <div className='Question NoSelect'>► What networks are supported?</div>
-                    <div className='Answer NoSelect'>The Mainnet and Sepolia.</div>
+                    <div className='Answer NoSelect'>Mainnet</div>
                 </div>
                 <div className='QuestionAnswerWrapper'>
                     <div className='Question NoSelect'>► Can I contribute to this magnificent project?</div>
